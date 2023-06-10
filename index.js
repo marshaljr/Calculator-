@@ -1,7 +1,7 @@
-let string = "";
+let string = ""; //to store input value
 let buttons = document.querySelectorAll(".btns");
 const pattern = /[\d\+\-\*\/\.\%\^]+/;
-let isActive = true;
+let isActive = false;
 console.log(buttons);
 
 Array.from(buttons).forEach((button) => {
@@ -13,7 +13,7 @@ Array.from(buttons).forEach((button) => {
       isActive = !isActive;
       return;
     }
-    if (isActive === false) {
+    if (isActive === true) {
       return;
     }
 
@@ -43,6 +43,6 @@ Array.from(buttons).forEach((button) => {
       string += value;
     }
 
-    document.querySelector("#result").value = string;
+    document.querySelector("#result").value = string; //to display ans
   });
 });
